@@ -68,7 +68,7 @@ export function EventLog({ events }: EventLogProps) {
 		if (event.type.endsWith("delta")) {
 			if (deltaEvents[event.type]) {
 				// for now just log a single event per render pass
-				return;
+				continue;
 			}
 			deltaEvents[event.type] = event;
 		}

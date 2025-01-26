@@ -95,6 +95,7 @@ export function ToolPanel({
 		arguments: string;
 	} | null>(null);
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies:
 	useEffect(() => {
 		if (!events || events.length === 0) return;
 
@@ -129,7 +130,7 @@ export function ToolPanel({
 				}
 			}
 		}
-	}, [events, functionAdded, sendClientEvent]);
+	}, [events]);
 
 	useEffect(() => {
 		if (!isSessionActive) {
